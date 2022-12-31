@@ -28,7 +28,8 @@ The safety critical information is communicated to the Front Control Module via 
 ![image](https://user-images.githubusercontent.com/82067858/210156016-07d12071-6ed7-4ffc-8136-203345e28255.png)
  
 Another drive and safety critical signal on our car that is communicated over CAN bus is the accelerator pedal position sensor (APPS) signals. We use Each EV FSAE and FSG car is required to have at least two APPS installed with two distinct non-intersecting transfer functions. The APPS signals are read on the Front Control Module and a plausibility check is done to ensure that both signals agree. A plausibility bit will be incorporated in the CAN message forwarding the APPS signal to the Rear Controller where a second plausibility check will be done with the signals and the plausibility bit to ensure that the data was not corrupted during communication. This is all done on top of the CRC (cyclic redundancy check) that is standard in the CAN communication protocol.
-PCB Layout
+
+## PCB Layout
 
 ![image](https://user-images.githubusercontent.com/82067858/210156017-7909f6c7-4115-465f-8a65-d9893aa4a744.png)
 
